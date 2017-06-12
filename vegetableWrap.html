@@ -1,0 +1,793 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0037)http://cmu.mynutritioncalculator.net/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="apple-itunes-app" content="app-id=903750726">
+<meta name="google-play-app" content="app-id=com.nutritionaddition.nutrition_cmu">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition Addition® | Carnegie Mellon University</title>
+<script type="text/javascript" async="" src="./vegetableWrap_files/ga.js"></script><script type="text/javascript" src="./vegetableWrap_files/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./vegetableWrap_files/ajax.dynamiclist.js"></script>
+<script type="text/javascript" src="./vegetableWrap_files/ajax.dynamiclist.ajax.js"></script>
+<script type="text/javascript" src="./vegetableWrap_files/retina.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./vegetableWrap_files/style.css" media="all">
+<link rel="stylesheet" type="text/css" href="./vegetableWrap_files/nutrition.css" media="all">
+<link rel="stylesheet" type="text/css" href="./vegetableWrap_files/app-banner.css" media="all">
+<link rel="apple-touch-icon" href="http://cmu.mynutritioncalculator.net/_specific/cmu/app_gfx/nc_icon.png">
+<link rel="android-touch-icon" href="http://cmu.mynutritioncalculator.net/_specific/cmu/app_gfx/nc_icon.png">
+<style>
+html { overflow-y: scroll; }
+body { background: #ffffff; }
+</style>
+</head>
+
+<body id="nutriadd">
+
+<div id="nutricalc" class="container">
+	<div id="header"><img src="./vegetableWrap_files/Carnegie Mellon University Nutrition Calculator-940x150@2x.gif" width="940" height="150" border="0"></div>
+<div class="break"></div>
+
+	<div class="insetO">
+		<div class="tabtops">
+			<ul class="tabs">
+				<li class="active"><a tab="configure">Configure a Meal</a></li>
+				<li><a tab="ranges">Nutrient Ranges</a></li>
+				<li><a tab="details">Comprehensive Details</a></li>
+				<li><a tab="meal">My Meal</a><div id="mymealbadge" class="badge hidden">0<div class="clear"></div></div></li>
+				<li class="right"><a tab="information"><img src="./vegetableWrap_files/information@2x.png" width="20" height="20" border="0" title="Information"></a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="tabcontent">
+			<div id="configure" class="borderU" style="display: block;">
+<div class="padO">
+	<div class="controlcenter">
+		<div class="title">Configure a Meal</div>
+		<div class="body">
+			<div id="theplus">
+				<div id="block1" class="block left">
+					<div class="content fourthmeal">
+						<div class="text" style="padding-bottom:25px;"><b>Step 1: Please select a meal time...</b></div>
+						<div class="tacenter"><input id="btn_breakfast" type="button" class="step1 button blue" meal="1" value="Breakfast"></div>
+						<div class="tacenter"><input id="btn_lunch" type="button" class="step1 button green" meal="2" value="Lunch"></div>
+						<div class="tacenter"><input id="btn_dinner" type="button" class="step1 button blue" meal="3" value="Dinner"></div>
+						<div class="tacenter"><input id="btn_fourthmeal" type="button" class="step1 button blue" meal="4" value="Late Night"></div>
+					</div>
+				</div>
+				<div class="dividerV">&nbsp;</div>
+				<div id="block2" class="block right">
+					<div class="spinner hidden" style="display: none;"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32"></div>
+					<div class="waiting visible" style="display: none;">Step 2</div>
+					<div class="content hidden" style="display: block;">
+						<div class="text"><b>Step 2: Please select a serving line...</b></div>
+						<div class="concepts"><select name="concepts" id="configure_concepts" size="2"><optgroup label="Baker Hall"><option value="32">Gingers Express</option></optgroup><optgroup label="College of Fine Arts"><option value="30">Zebra Lounge</option></optgroup><optgroup label="Gates Center"><option value="27">Tazza D’Oro</option></optgroup><optgroup label="Hamburg Hall"><option value="10">Heinz Café</option></optgroup><optgroup label="Hunt Library"><option value="12">Maggie Murph Café</option></optgroup><optgroup label="Jared L. Cohon University Center"><option value="5">Big City Grill</option><option value="6">Creperie</option><option value="7">Downtown Deli</option><option value="1">El Gallo de Oro</option><option value="8">eVgefstos</option><option value="15">Pasta Villaggio</option><option value="16">Pomegranate</option><option value="33">Quik Piks</option><option value="34">Rice Bowl</option><option value="43">Schatz Lunch</option><option value="21">Spinning Salads</option></optgroup><optgroup label="Mellon Institute"><option value="31">Stephanie's</option></optgroup><optgroup label="Morewood Gardens"><option value="28">Underground</option></optgroup><optgroup label="Posner Hall"><option value="9">Exchange</option></optgroup><optgroup label="Resnik"><option value="4">Carnegie Mellon Café</option><option value="36">El Burrito Grande</option><option value="14">Nakama Express</option><option value="19">Soup &amp; Salad</option><option value="20">Spice It Up Grill</option><option value="25">Tartans Pavilion</option><option value="26">Taste of India</option></optgroup><optgroup label="Software Engineering Institute"><option value="18">SEIber Café</option></optgroup><optgroup label="Wean Hall"><option value="11">La Prima Espresso</option></optgroup></select></div>
+					</div>
+				</div>
+				<div class="dividerH"></div>
+				<div class="dividerH"></div>
+				<div id="block3" class="block left">
+					<div class="spinner hidden" style="display: none;"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32"></div>
+					<div class="waiting visible" style="display: none;">Step 3</div>
+					<div class="content hidden" style="display: block;">
+						<div class="text"><b>Step 3: Please select a food group...</b></div>
+						<div class="groups"><select name="groups" id="configure_groups" size="2"><option value="267">Beverages</option><option value="10">Breakfast Sandwiches</option><option value="230">Desserts </option><option value="47">Entrees</option><option value="423">Grab 'N' Go Items</option><option value="48">Pasta</option><option value="11">Salads</option><option value="4">Sandwiches/Wraps</option><option value="50">Sides</option><option value="5">Soups</option></select></div>
+					</div>
+				</div>
+				<div class="dividerV">&nbsp;</div>
+				<div id="block4" class="block right">
+					<div class="spinner hidden" style="display: none;"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32"></div>
+					<div class="waiting visible" style="display: none;">Step 4</div>
+					<div class="content hidden" style="display: block;">
+						<div class="text"><b>Step 4: Please select a food...</b></div>
+						<div class="foods"><select name="foods" id="configure_foods" size="2"><option value="551266830">Bacon Lettuce Tomato Sandwich</option><option value="2019184914">Bacon Lettuce Tomato Sandwich with Cheese</option><option value="735222358">Buffalo Chicken Wrap</option><option value="1120749763">Build Your Own Sandwich</option><option value="469573012">Cajun Turkey Sandwich</option><option value="1172826590">Cheezy Beef Melt</option><option value="916180270">Chicken Salad Sandwich</option><option value="1981428376">Classic Italian</option><option value="1986546592">Corned Beef Sandwich</option><option value="316213046">Egg Salad Sandwich</option><option value="251908920">Free Market</option><option value="463987341">Grilled Cheese</option><option value="63862952">Ham Sandwich</option><option value="1467858270">Roast Beef Sandwich</option><option value="595693370">Southwest Chicken Wrap</option><option value="321028561">Taste Sensation</option><option value="476444634">Tuna Salad Sandwich</option><option value="674576002">Turkey Sandwich</option><option value="1340999180">Vegetable Wrap</option><option value="1945185620">Wall Street</option></select></div>
+					</div>
+				</div>
+			</div>
+			<div id="thelabel">
+				<div id="thenutritionlabel"><div class="spinner hidden"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32"></div>
+<table width="200" border="0" align="center" cellpadding="3" cellspacing="0" id="nutritionlabel">
+	<tbody><tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+				<tbody><tr>
+					<td colspan="2" class="helv13"><b>Nutrition&nbsp;Facts</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8"><b>Vegetable Wrap</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8 servingsize">Serving Size 1 wrap</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv6_bordertop_borderbottom"><b>Amount Per Serving</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8_borderbottom_small"><b>Calories</b> 300</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" class="helv6" style="border-bottom:1px solid #000000;"><b>% Daily Value* </b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Total Fat</b> 7g</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>11%</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8" style="padding-left:10px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="1">
+							<tbody><tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Saturated Fat 2g</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>10%</b></td>
+							</tr>
+							<tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Trans Fat 0g</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;">&nbsp;</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Cholesterol</b> 0mg</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>0%</b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Sodium</b> 740mg</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>31%</b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Total Carbohydrate</b> 52g</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>17%</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8" style="padding-left:10px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="1">
+							<tbody><tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Dietary Fiber 5g</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>20%</b></td>
+							</tr>
+							<tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Sugars 5g</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;">&nbsp;</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td class="helv8_borderbottom"><b>Protein</b> 10g</td>
+					<td align="right" class="helv8_borderbottom">&nbsp;</td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td width="48%" class="helv8">Vitamin A 30%</td>
+					<td width="4%" align="center" class="helv10">•</td>
+					<td width="48%" class="helv8">Vitamin C 50%</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+				<tr>
+					<td class="helv8">Calcium 2%</td>
+					<td align="center" class="helv10">•</td>
+					<td class="helv8">Iron 4%</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td colspan="2" valign="top" class="helv8">*</td>
+					<td valign="top" class="helv5">Percent Daily Values are based on a
+						2,000 calorie diet. Your Daily Values may be higher or lower depending
+						on your calorie needs:</td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">Calories:</td>
+					<td valign="top" class="helv5">2,000</td>
+					<td valign="top" class="helv5">2,500</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Total Fat </td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">65g</td>
+					<td valign="top" class="helv5">80g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5" style="padding-left:10px;">Sat Fat </td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">20g</td>
+					<td valign="top" class="helv5">25g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Cholesterol</td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">300mg</td>
+					<td valign="top" class="helv5">300mg</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Sodium</td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">2,400mg</td>
+					<td valign="top" class="helv5">2,400mg</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Total Carbohydrate </td>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">300g</td>
+					<td valign="top" class="helv5">375g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5" style="padding-left:10px;">Dietary Fiber </td>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">25g</td>
+					<td valign="top" class="helv5">30g</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<div class="allergy" style="margin-top: 5px;"><div class="fleft" style="margin-right:5px;"><b>Details:</b> </div><div id="icon1" class="foodicon vegetarian foodicon white" title="Vegetarian" image_id="0" ref="icon1" style="margin-right: 5px; background-color: rgb(0,153,0);">V</div><div id="icon2" class="foodicon vegan foodicon black" title="Vegan" image_id="0" ref="icon2" style="margin-right: 5px; background-color: rgb(0,255,0);">VG</div><div id="icon11" class="foodicon allergy_milk foodicon black" title="Allergy: Dairy" image_id="0" ref="icon11" style="margin-right: 5px; background-color: rgb(155,211,251);">D</div><div id="icon12" class="foodicon allergy_egg foodicon black" title="Allergy: Egg" image_id="0" ref="icon12" style="margin-right: 5px; background-color: rgb(255,255,153);">E</div><div id="icon14" class="foodicon allergy_treenut foodicon black" title="Allergy: Treenut" image_id="0" ref="icon14" style="margin-right: 5px; background-color: rgb(191,156,118);">TN</div><div id="icon17" class="foodicon allergy_soy foodicon black" title="Allergy: Soy" image_id="0" ref="icon17" style="margin-right: 5px; background-color: rgb(217,141,234);">S</div><div id="icon18" class="foodicon allergy_wheat foodicon black" title="Allergy: Wheat" image_id="0" ref="icon18" style="margin-right: 5px; background-color: rgb(219,219,219);">W</div><img id="icon52" src="./vegetableWrap_files/Healthful Choice-16x16.png" width="16" height="16" border="0" class="custom2 foodicon" title="Healthful Choice" image_id="9" ref="icon52" style="margin-right: 5px;"></div><div class="clear"></div>				<div class="tacenter" style="padding-top:5px;"><input type="button" class="button green" id="btn_addtomeal" value="Add Food to Meal"><input type="button" class="button green hidden" id="btn_addtomeal_inmeal" value="Food is in Meal" disabled="disabled"></div>
+<input type="hidden" name="label_groupid" id="label_groupid" value="4"><input type="hidden" name="label_foodid" id="label_foodid" value="1340999180"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+			</div>
+			<div id="ranges" class="borderU" style="display: none;">
+<div class="padO">
+	<div class="controlcenter">
+		<div class="title">Nutrient Ranges<span></span></div>
+		<div class="body">
+			<form name="form_ranges" id="form_ranges" action="javascript:void(0);">
+				<p class="text"><b>Search for foods based on nutrient range.</b></p>
+				<p class="text pad_">Complete the fields you wish to use for your search; leave the others blank.</p>
+				<div class="fleft">
+<table id="table_nutrientsearch" class="nutrientsearch" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="nutrient"><label for="calories_min">Calories:</label></td>
+		<td><label for="calories_min">Between:</label></td>
+		<td class="input"><input type="text" name="calories_min" id="calories_min" class="value" value="" autocomplete="off"> cal</td>
+		<td><label for="calories_max">and</label></td>
+		<td class="input"><input type="text" name="calories_max" id="calories_max" class="value" value="" autocomplete="off"> cal</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="totalfat_min">Total Fat:</label></td>
+		<td><label for="totalfat_min">Between:</label></td>
+		<td class="input"><input type="text" name="totalfat_min" id="totalfat_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="totalfat_max">and</label></td>
+		<td class="input"><input type="text" name="totalfat_max" id="totalfat_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="saturatedfat_min">Saturated Fat:</label></td>
+		<td><label for="saturatedfat_min">Between:</label></td>
+		<td class="input"><input type="text" name="saturatedfat_min" id="saturatedfat_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="saturatedfat_max">and</label></td>
+		<td class="input"><input type="text" name="saturatedfat_max" id="saturatedfat_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="transfat_min">Trans Fat:</label></td>
+		<td><label for="transfat_min">Between:</label></td>
+		<td class="input"><input type="text" name="transfat_min" id="transfat_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="transfat_max">and</label></td>
+		<td class="input"><input type="text" name="transfat_max" id="transfat_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="cholesterol_min">Cholesterol:</label></td>
+		<td><label for="cholesterol_min">Between:</label></td>
+		<td class="input"><input type="text" name="cholesterol_min" id="cholesterol_min" class="value" value="" autocomplete="off"> mg</td>
+		<td><label for="cholesterol_max">and</label></td>
+		<td class="input"><input type="text" name="cholesterol_max" id="cholesterol_max" class="value" value="" autocomplete="off"> mg</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="sodium_min">Sodium:</label></td>
+		<td><label for="sodium_min">Between:</label></td>
+		<td class="input"><input type="text" name="sodium_min" id="sodium_min" class="value" value="" autocomplete="off"> mg</td>
+		<td><label for="sodium_max">and</label></td>
+		<td class="input"><input type="text" name="sodium_max" id="sodium_max" class="value" value="" autocomplete="off"> mg</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="carbohydrates_min">Carbohydrates:</label></td>
+		<td><label for="carbohydrates_min">Between:</label></td>
+		<td class="input"><input type="text" name="carbohydrates_min" id="carbohydrates_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="carbohydrates_max">and</label></td>
+		<td class="input"><input type="text" name="carbohydrates_max" id="carbohydrates_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="dietaryfiber_min">Dietary Fiber:</label></td>
+		<td><label for="dietaryfiber_min">Between:</label></td>
+		<td class="input"><input type="text" name="dietaryfiber_min" id="dietaryfiber_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="dietaryfiber_max">and</label></td>
+		<td class="input"><input type="text" name="dietaryfiber_max" id="dietaryfiber_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="protein_min">Protein:</label></td>
+		<td><label for="protein_min">Between:</label></td>
+		<td class="input"><input type="text" name="protein_min" id="protein_min" class="value" value="" autocomplete="off"> g</td>
+		<td><label for="protein_max">and</label></td>
+		<td class="input"><input type="text" name="protein_max" id="protein_max" class="value" value="" autocomplete="off"> g</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="vitamina_min">Vitamin A:</label></td>
+		<td><label for="vitamina_min">Between:</label></td>
+		<td class="input"><input type="text" name="vitamina_min" id="vitamina_min" class="value" value="" autocomplete="off"> %</td>
+		<td><label for="vitamina_max">and</label></td>
+		<td class="input"><input type="text" name="vitamina_max" id="vitamina_max" class="value" value="" autocomplete="off"> %</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="vitaminc_min">Vitamin C:</label></td>
+		<td><label for="vitaminc_min">Between:</label></td>
+		<td class="input"><input type="text" name="vitaminc_min" id="vitaminc_min" class="value" value="" autocomplete="off"> %</td>
+		<td><label for="vitaminc_max">and</label></td>
+		<td class="input"><input type="text" name="vitaminc_max" id="vitaminc_max" class="value" value="" autocomplete="off"> %</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="calcium_min">Calcium:</label></td>
+		<td><label for="calcium_min">Between:</label></td>
+		<td class="input"><input type="text" name="calcium_min" id="calcium_min" class="value" value="" autocomplete="off"> %</td>
+		<td><label for="calcium_max">and</label></td>
+		<td class="input"><input type="text" name="calcium_max" id="calcium_max" class="value" value="" autocomplete="off"> %</td>
+	</tr>
+	<tr>
+		<td class="nutrient"><label for="iron_min">Iron:</label></td>
+		<td><label for="iron_min">Between:</label></td>
+		<td class="input"><input type="text" name="iron_min" id="iron_min" class="value" value="" autocomplete="off"> %</td>
+		<td><label for="iron_max">and</label></td>
+		<td class="input"><input type="text" name="iron_max" id="iron_max" class="value" value="" autocomplete="off"> %</td>
+	</tr>
+</tbody></table>
+<p class="small tacenter">All nutrient range searches are inclusive,<br>meaning <b>greater-than-or-equal-to</b> and <b>less-than-or-equal-to</b>.</p>
+				</div>
+				<div class="dividerV" style="height: 0px;"></div>
+				<div class="fleft">
+<div style="padding:0px 10px;">Show foods with <label><input type="radio" name="join" id="joinOR" value="OR"><span>ANY</span></label> of these icons or <label><input type="radio" name="join" id="joinAND" value="AND" checked="checked"><span>ALL</span></label> of these icons:</div>
+<table id="table_nutrientsearch_allergy" class="nutrientsearch_allergy" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="allergy"><div id="icon" class="foodicon vegetarian foodicon white" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(0,153,0);">V</div>Vegetarian</td>
+		<td class="choice"><input type="radio" name="vegetarian" id="vegetarian_yes" value="1"><label for="vegetarian_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="vegetarian" id="vegetarian_no" value="2"><label for="vegetarian_no"> No</label></td>
+		<td><input type="radio" name="vegetarian" id="vegetarian_np" value="0" checked="checked"><label for="vegetarian_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon vegan foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(0,255,0);">VG</div>Vegan</td>
+		<td class="choice"><input type="radio" name="vegan" id="vegan_yes" value="1"><label for="vegan_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="vegan" id="vegan_no" value="2"><label for="vegan_no"> No</label></td>
+		<td><input type="radio" name="vegan" id="vegan_np" value="0" checked="checked"><label for="vegan_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_milk foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(155,211,251);">D</div>Allergy: Dairy</td>
+		<td class="choice"><input type="radio" name="allergy_milk" id="allergy_milk_yes" value="1"><label for="allergy_milk_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_milk" id="allergy_milk_no" value="2"><label for="allergy_milk_no"> No</label></td>
+		<td><input type="radio" name="allergy_milk" id="allergy_milk_np" value="0" checked="checked"><label for="allergy_milk_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_egg foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(255,255,153);">E</div>Allergy: Egg</td>
+		<td class="choice"><input type="radio" name="allergy_egg" id="allergy_egg_yes" value="1"><label for="allergy_egg_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_egg" id="allergy_egg_no" value="2"><label for="allergy_egg_no"> No</label></td>
+		<td><input type="radio" name="allergy_egg" id="allergy_egg_np" value="0" checked="checked"><label for="allergy_egg_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_peanut foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(230,213,143);">PN</div>Allergy: Peanut</td>
+		<td class="choice"><input type="radio" name="allergy_peanut" id="allergy_peanut_yes" value="1"><label for="allergy_peanut_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_peanut" id="allergy_peanut_no" value="2"><label for="allergy_peanut_no"> No</label></td>
+		<td><input type="radio" name="allergy_peanut" id="allergy_peanut_np" value="0" checked="checked"><label for="allergy_peanut_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_treenut foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(191,156,118);">TN</div>Allergy: Treenut</td>
+		<td class="choice"><input type="radio" name="allergy_treenut" id="allergy_treenut_yes" value="1"><label for="allergy_treenut_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_treenut" id="allergy_treenut_no" value="2"><label for="allergy_treenut_no"> No</label></td>
+		<td><input type="radio" name="allergy_treenut" id="allergy_treenut_np" value="0" checked="checked"><label for="allergy_treenut_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_fish foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(255,167,59);">F</div>Allergy: Fish</td>
+		<td class="choice"><input type="radio" name="allergy_fish" id="allergy_fish_yes" value="1"><label for="allergy_fish_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_fish" id="allergy_fish_no" value="2"><label for="allergy_fish_no"> No</label></td>
+		<td><input type="radio" name="allergy_fish" id="allergy_fish_np" value="0" checked="checked"><label for="allergy_fish_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_shellfish foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(107,243,255);">SH</div>Allergy: Shellfish</td>
+		<td class="choice"><input type="radio" name="allergy_shellfish" id="allergy_shellfish_yes" value="1"><label for="allergy_shellfish_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_shellfish" id="allergy_shellfish_no" value="2"><label for="allergy_shellfish_no"> No</label></td>
+		<td><input type="radio" name="allergy_shellfish" id="allergy_shellfish_np" value="0" checked="checked"><label for="allergy_shellfish_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_soy foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(217,141,234);">S</div>Allergy: Soy</td>
+		<td class="choice"><input type="radio" name="allergy_soy" id="allergy_soy_yes" value="1"><label for="allergy_soy_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_soy" id="allergy_soy_no" value="2"><label for="allergy_soy_no"> No</label></td>
+		<td><input type="radio" name="allergy_soy" id="allergy_soy_np" value="0" checked="checked"><label for="allergy_soy_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon allergy_wheat foodicon black" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(219,219,219);">W</div>Allergy: Wheat</td>
+		<td class="choice"><input type="radio" name="allergy_wheat" id="allergy_wheat_yes" value="1"><label for="allergy_wheat_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="allergy_wheat" id="allergy_wheat_no" value="2"><label for="allergy_wheat_no"> No</label></td>
+		<td><input type="radio" name="allergy_wheat" id="allergy_wheat_np" value="0" checked="checked"><label for="allergy_wheat_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><img id="icon" src="./vegetableWrap_files/Whole Grain-16x16@2x.png" width="0" height="0" border="0" class="custom1 foodicon" image_id="4" ref="icon" style="margin-right: 5px;">Whole Grain</td>
+		<td class="choice"><input type="radio" name="custom1" id="custom1_yes" value="1"><label for="custom1_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="custom1" id="custom1_no" value="2"><label for="custom1_no"> No</label></td>
+		<td><input type="radio" name="custom1" id="custom1_np" value="0" checked="checked"><label for="custom1_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><img id="icon" src="./vegetableWrap_files/Healthful Choice-16x16@2x.png" width="0" height="0" border="0" class="custom2 foodicon" image_id="9" ref="icon" style="margin-right: 5px;">Healthful Choice</td>
+		<td class="choice"><input type="radio" name="custom2" id="custom2_yes" value="1"><label for="custom2_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="custom2" id="custom2_no" value="2"><label for="custom2_no"> No</label></td>
+		<td><input type="radio" name="custom2" id="custom2_np" value="0" checked="checked"><label for="custom2_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><img id="icon" src="./vegetableWrap_files/Heart Smart-1-16x16@2x.png" width="0" height="0" border="0" class="custom3 foodicon" image_id="6" ref="icon" style="margin-right: 5px;">Heart Smart</td>
+		<td class="choice"><input type="radio" name="custom3" id="custom3_yes" value="1"><label for="custom3_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="custom3" id="custom3_no" value="2"><label for="custom3_no"> No</label></td>
+		<td><input type="radio" name="custom3" id="custom3_np" value="0" checked="checked"><label for="custom3_np"> No Preference</label></td>
+	</tr>
+	<tr>
+		<td class="allergy"><div id="icon" class="foodicon custom5 foodicon white" image_id="0" ref="icon" style="margin-right: 5px; background-color: rgb(122,48,207);">K</div>Kosher</td>
+		<td class="choice"><input type="radio" name="custom5" id="custom5_yes" value="1"><label for="custom5_yes"> Yes</label></td>
+		<td class="choice"><input type="radio" name="custom5" id="custom5_no" value="2"><label for="custom5_no"> No</label></td>
+		<td><input type="radio" name="custom5" id="custom5_np" value="0" checked="checked"><label for="custom5_np"> No Preference</label></td>
+	</tr>
+</tbody></table>
+				</div>
+				<div class="clear pad_"></div>
+				<div class="clear pad_"></div>
+				<p class="tacenter"><input type="button" class="button green" value="Search" id="btn_ranges_search"></p>
+			</form>
+		</div>
+	</div>
+	<div class="tacenter ranges_searching hidden">
+		<div class="ranges_searching_inside"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32" border="0"><br>Searching...</div>
+		<div class="clear"></div>
+	</div>
+	<div class="ranges_results hidden"></div>
+</div>
+			</div>
+			<div id="details" class="borderU" style="display: none;">
+<div class="padO">
+	<div class="controlcenter">
+		<div class="title">Comprehensive Details</div>
+		<div class="body">
+			<div id="search_area">
+				<div class="search_instructions">Search for a food by name...</div>
+				<div class="search_box">
+					<input type="text" name="search_food" id="search_food" value="" class="search_food" autocomplete="off"><input type="button" id="search_area_button" class="hidden">
+					<img src="./vegetableWrap_files/indicator@2x.gif" width="0" height="0" id="search_comp_spinner" class="hidden" border="0">
+					<input type="hidden" name="search_food_hidden" id="search_food_hidden" value="">
+				</div>
+			</div>
+			<div id="search_area_results" class="">
+				<div id="thelabel_comp">
+					<div id="thenutritionlabel">
+<div class="spinner hidden"><img src="./vegetableWrap_files/indicator2.gif" width="32" height="32"></div>
+<table width="200" border="0" align="center" cellpadding="3" cellspacing="0" id="nutritionlabel" active="false">
+	<tbody><tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+				<tbody><tr>
+					<td colspan="2" class="helv13"><b>Nutrition&nbsp;Facts</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8"><b>&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8 servingsize">Serving Size &nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv6_bordertop_borderbottom"><b>Amount Per Serving</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8_borderbottom_small"><b>Calories</b> ---</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" class="helv6" style="border-bottom:1px solid #000000;"><b>% Daily Value* </b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Total Fat</b> ---</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8" style="padding-left:10px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="1">
+							<tbody><tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Saturated Fat ---</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+							</tr>
+							<tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Trans Fat ---</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;">&nbsp;</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Cholesterol</b> ---</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Sodium</b> ---</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+				</tr>
+				<tr>
+					<td class="helv8" style="border-bottom:1px solid #000000;"><b>Total Carbohydrate</b> ---</td>
+					<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="helv8" style="padding-left:10px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="1">
+							<tbody><tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Dietary Fiber ---</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;"><b>---</b></td>
+							</tr>
+							<tr>
+								<td class="helv8" style="border-bottom:1px solid #000000;">Sugars ---</td>
+								<td align="right" class="helv8" style="border-bottom:1px solid #000000;">&nbsp;</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td class="helv8_borderbottom"><b>Protein</b> ---</td>
+					<td align="right" class="helv8_borderbottom">&nbsp;</td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td width="48%" class="helv8">Vitamin A ---</td>
+					<td width="4%" align="center" class="helv10">•</td>
+					<td width="48%" class="helv8">Vitamin C ---</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+				<tr>
+					<td class="helv8">Calcium ---</td>
+					<td align="center" class="helv10">•</td>
+					<td class="helv8">Iron ---</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td colspan="2" valign="top" class="helv8">*</td>
+					<td valign="top" class="helv5">Percent Daily Values are based on a
+						2,000 calorie diet. Your Daily Values may be higher or lower depending
+						on your calorie needs:</td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0" cellspacing="3" cellpadding="0">
+				<tbody><tr>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">Calories:</td>
+					<td valign="top" class="helv5">2,000</td>
+					<td valign="top" class="helv5">2,500</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="helv8" style="border-bottom:1px solid #000000; height:1px;"></td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Total Fat </td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">65g</td>
+					<td valign="top" class="helv5">80g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5" style="padding-left:10px;">Sat Fat </td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">20g</td>
+					<td valign="top" class="helv5">25g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Cholesterol</td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">300mg</td>
+					<td valign="top" class="helv5">300mg</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Sodium</td>
+					<td valign="top" class="helv5">Less than </td>
+					<td valign="top" class="helv5">2,400mg</td>
+					<td valign="top" class="helv5">2,400mg</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5">Total Carbohydrate </td>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">300g</td>
+					<td valign="top" class="helv5">375g</td>
+				</tr>
+				<tr>
+					<td valign="top" class="helv5" style="padding-left:10px;">Dietary Fiber </td>
+					<td valign="top" class="helv5">&nbsp;</td>
+					<td valign="top" class="helv5">25g</td>
+					<td valign="top" class="helv5">30g</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+					</div>
+				</div>
+	            <table width="670" cellpadding="0" cellspacing="0" border="0">
+					<tbody><tr>
+						<td valign="top"><div id="allergies_comp"><table id="table_details_allergy" class="details_allergy" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="allergy off"><div id="icon1" class="foodicon vegetarian off foodicon white" title="Vegetarian" image_id="0" ref="icon1" style="margin-right: 5px; background-color: rgb(0,153,0);">V</div>Vegetarian</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon2" class="foodicon vegan off foodicon black" title="Vegan" image_id="0" ref="icon2" style="margin-right: 5px; background-color: rgb(0,255,0);">VG</div>Vegan</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon11" class="foodicon allergy_milk off foodicon black" title="Allergy: Dairy" image_id="0" ref="icon11" style="margin-right: 5px; background-color: rgb(155,211,251);">D</div>Allergy: Dairy</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon12" class="foodicon allergy_egg off foodicon black" title="Allergy: Egg" image_id="0" ref="icon12" style="margin-right: 5px; background-color: rgb(255,255,153);">E</div>Allergy: Egg</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon13" class="foodicon allergy_peanut off foodicon black" title="Allergy: Peanut" image_id="0" ref="icon13" style="margin-right: 5px; background-color: rgb(230,213,143);">PN</div>Allergy: Peanut</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon14" class="foodicon allergy_treenut off foodicon black" title="Allergy: Treenut" image_id="0" ref="icon14" style="margin-right: 5px; background-color: rgb(191,156,118);">TN</div>Allergy: Treenut</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon15" class="foodicon allergy_fish off foodicon black" title="Allergy: Fish" image_id="0" ref="icon15" style="margin-right: 5px; background-color: rgb(255,167,59);">F</div>Allergy: Fish</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon16" class="foodicon allergy_shellfish off foodicon black" title="Allergy: Shellfish" image_id="0" ref="icon16" style="margin-right: 5px; background-color: rgb(107,243,255);">SH</div>Allergy: Shellfish</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon17" class="foodicon allergy_soy off foodicon black" title="Allergy: Soy" image_id="0" ref="icon17" style="margin-right: 5px; background-color: rgb(217,141,234);">S</div>Allergy: Soy</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon18" class="foodicon allergy_wheat off foodicon black" title="Allergy: Wheat" image_id="0" ref="icon18" style="margin-right: 5px; background-color: rgb(219,219,219);">W</div>Allergy: Wheat</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><img id="icon51" src="./vegetableWrap_files/Whole Grain-16x16@2x.png" width="0" height="0" border="0" class="custom1 off foodicon" title="Whole Grain" image_id="4" ref="icon51" style="margin-right: 5px;">Whole Grain</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><img id="icon52" src="./vegetableWrap_files/Healthful Choice-16x16@2x.png" width="0" height="0" border="0" class="custom2 off foodicon" title="Healthful Choice" image_id="9" ref="icon52" style="margin-right: 5px;">Healthful Choice</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><img id="icon53" src="./vegetableWrap_files/Heart Smart-1-16x16@2x.png" width="0" height="0" border="0" class="custom3 off foodicon" title="Heart Smart" image_id="6" ref="icon53" style="margin-right: 5px;">Heart Smart</td>
+	</tr>
+	<tr>
+		<td class="allergy off"><div id="icon55" class="foodicon custom5 off foodicon white" title="Kosher" image_id="0" ref="icon55" style="margin-right: 5px; background-color: rgb(122,48,207);">K</div>Kosher</td>
+	</tr>
+</tbody></table>
+</div></td>
+						<td valign="top" width="1">
+							<div id="nutrientgrid_comp">
+<table class="grid_for_details" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td><div class="columnname calories"></div></td>
+		<td><div class="columnname totalfat"></div></td>
+		<td><div class="columnname saturatedfat"></div></td>
+		<td><div class="columnname transfat"></div></td>
+		<td><div class="columnname cholesterol"></div></td>
+		<td><div class="columnname sodium"></div></td>
+		<td><div class="columnname carbohydrates"></div></td>
+		<td><div class="columnname dietaryfiber"></div></td>
+		<td><div class="columnname protein"></div></td>
+		<td><div class="columnname vitamina"></div></td>
+		<td><div class="columnname vitaminc"></div></td>
+		<td><div class="columnname calcium"></div></td>
+		<td><div class="columnname iron"></div></td>
+	</tr>
+	<tr class="food">
+		<td class="nutrient" nutrient="calories">---</td>
+		<td class="nutrient" nutrient="totalfat">---</td>
+		<td class="nutrient" nutrient="saturatedfat">---</td>
+		<td class="nutrient" nutrient="transfat">---</td>
+		<td class="nutrient" nutrient="cholesterol">---</td>
+		<td class="nutrient" nutrient="sodium">---</td>
+		<td class="nutrient" nutrient="carbohydrates">---</td>
+		<td class="nutrient" nutrient="dietaryfiber">---</td>
+		<td class="nutrient" nutrient="protein">---</td>
+		<td class="nutrient" nutrient="vitamina">---</td>
+		<td class="nutrient" nutrient="vitaminc">---</td>
+		<td class="nutrient" nutrient="calcium">---</td>
+		<td class="nutrient" nutrient="iron">---</td>
+	</tr>
+</tbody></table>
+							<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+				</tbody></table>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+			<div id="meal" class="borderU" style="display: none;">
+<input type="hidden" name="rounding" id="rounding" value="none">
+<div class="padO">
+	<div id="configure_table">
+<div class="content hidden"><table class="configure_food_topper" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td>&nbsp;</td>
+		<td class="qty"><div class="columnname"></div></td>
+		<td class="nutrient"><div class="columnname calories"></div></td>
+		<td class="nutrient"><div class="columnname totalfat"></div></td>
+		<td class="nutrient"><div class="columnname saturatedfat"></div></td>
+		<td class="nutrient"><div class="columnname transfat"></div></td>
+		<td class="nutrient"><div class="columnname cholesterol"></div></td>
+		<td class="nutrient"><div class="columnname sodium"></div></td>
+		<td class="nutrient"><div class="columnname carbohydrates"></div></td>
+		<td class="nutrient"><div class="columnname dietaryfiber"></div></td>
+		<td class="nutrient"><div class="columnname protein"></div></td>
+		<td class="nutrient"><div class="columnname vitamina"></div></td>
+		<td class="nutrient"><div class="columnname vitaminc"></div></td>
+		<td class="nutrient"><div class="columnname calcium"></div></td>
+		<td class="nutrient"><div class="columnname iron"></div></td>
+	</tr>
+</tbody></table>
+<input type="hidden" name="columns" id="columns" value="calories,totalfat,saturatedfat,transfat,cholesterol,sodium,carbohydrates,dietaryfiber,protein,vitamina,vitaminc,calcium,iron"><div class="grand_total_divider"></div>
+<table class="configure_food_grand_total" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr class="grandtotal">
+		<td class="foodname">Meal Total:</td>
+		<td></td>
+		<td class="nutrient" nutrient="calories">0</td>
+		<td class="nutrient" nutrient="totalfat">0</td>
+		<td class="nutrient" nutrient="saturatedfat">0</td>
+		<td class="nutrient" nutrient="transfat">0</td>
+		<td class="nutrient" nutrient="cholesterol">0</td>
+		<td class="nutrient" nutrient="sodium">0</td>
+		<td class="nutrient" nutrient="carbohydrates">0</td>
+		<td class="nutrient" nutrient="dietaryfiber">0</td>
+		<td class="nutrient" nutrient="protein">0</td>
+		<td class="nutrient" nutrient="vitamina">0</td>
+		<td class="nutrient" nutrient="vitaminc">0</td>
+		<td class="nutrient" nutrient="calcium">0</td>
+		<td class="nutrient" nutrient="iron">0</td>
+	</tr>
+</tbody></table>
+<div class="disclaimer">
+<p><strong>Nutrition Facts</strong> are based on information provided by product manufacturers and our dining vendors and partners. Variations may occur as the manufacturers may change their formulations or substitute another product. Nutrition facts may have a +/- 5% error rate.</p>
+<p><strong>Percent Daily Values</strong> are based on a 2,000 calorie diet. Your Daily Value may be higher or lower depending on your calorie needs. Use MyPlate.gov to determine your daily needs.</p></div>
+</div><div class="nocontent"><div class="text">Your meal contains no foods.</div></div>	</div>
+</div>
+			</div>
+			<div id="information" class="borderU" style="display: none;">
+<div class="padO">
+	<div class="information_box">
+<p>Welcome to the new Carnegie Mellon University, Dining Services Nutrition Information Tool!</p>	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<div class="insetU copyright">Copyright ©2013-2017 <a href="http://www.nutritionaddition.com/" target="_blank">Nutrition Addition</a>, a division of <a href="http://www.cmiworld.com/" target="_blank">Creative Minds, Inc.</a> All Rights Reserved.</div>
+</div>
+<div class="clear"></div>
+
+<script type="text/javascript" src="./vegetableWrap_files/jquery.js"></script>
+<script>if (window != window.top) window.top.location.href = "http://cmu.mynutritioncalculator.net";</script>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38363879-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript" src="./vegetableWrap_files/app-banner.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var appBannersConfig = {"title":" Nutrition - Carnegie Mellon Univ.","author":"Download for free today","price":"FREE","appStoreLanguage":"US","inAppStore":"On the App Store","inGooglePlay":"In Google Play","GooglePlayParams":null,"icon":"..\/..\/_specific\/cmu\/app_gfx\/nc_icon.png","iconGloss":false,"url":"","button":"FREE","scale":"auto","speedIn":"300","speedOut":"400","daysHidden":"7","daysReminder":"0","force":null,"hideOnInstall":"1","layer":"","iOSUniversalApp":"1","appendToSelector":"body","printViewPort":""}
+/* ]]> */
+</script>
+<script type="text/javascript" src="./vegetableWrap_files/app-banner-config.js"></script>
+
+
+<span style="border-radius: 3px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 11px; line-height: 20px; font-family: &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(255, 255, 255); background: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) 3px 50% / 14px 14px no-repeat rgb(189, 8, 28); position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased;">Save</span></body></html>
